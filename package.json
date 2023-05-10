@@ -49,5 +49,8 @@
 	},
 	"files": [
 		"/dist/"
-	]
+	],
+	"dependencies": {
+		"custom-listenable": "^0.2.1"
+	}
 }
