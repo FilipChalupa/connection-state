@@ -20,7 +20,7 @@ export default {
 			sourcemap: true,
 		},
 	],
-	external: [],
+	external: ['custom-listenable'],
 	plugins: [
 		del({ targets: path.parse(packageJson.main).dir + '/*' }),
 		peerDepsExternal(),
