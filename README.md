@@ -10,6 +10,22 @@ You can see it in action here [filipchalupa.cz/connection-state](https://filipch
 npm install connection-state
 ```
 
+## Usage
+
+```js
+import { connectionState } from 'connection-state'
+
+const connection = connectionState()
+
+console.log(`You are ${connection.getState()}.`)
+// connection.getState() returns 'online' or 'offline'
+
+connection.addListener((state) => {
+	console.log(`Your connection state has changed. You are now ${state}.`)
+})
+// state is 'online' or 'offline'
+```
+
 ## Development
 
 - Install dependencies: `npm ci`
