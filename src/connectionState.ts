@@ -11,7 +11,7 @@ export const connectionState = (options: ConnectionOptions = {}) => {
 
 	if (endpoints.length > 0) {
 		// @TODO: when navigator.onLine === true, check these endpoints
-		throw new Error('Endpoints are not supported yet')
+		console.warn('Endpoints are not supported yet')
 	}
 
 	const getState = () => {
