@@ -1,4 +1,4 @@
-import { connectionStatus } from '../src/connectionStatus'
+import { connectionState } from '../src'
 import './global.css'
 
 const output = document.querySelector('output')
@@ -6,10 +6,10 @@ if (!output) {
 	throw new Error('No output element found')
 }
 
-const status = connectionStatus()
+const connection = connectionState()
 
-output.textContent = `Initial status: ${status.getStatus()}`
+output.textContent = `Initial state: ${connection.getState()}`
 
-status.addListener((status) => {
-	output.textContent = `Updated status: ${status}`
+connection.addListener((state) => {
+	output.textContent = `Updated state: ${state}`
 })

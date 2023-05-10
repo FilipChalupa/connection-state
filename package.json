@@ -1,5 +1,5 @@
 {
-	"name": "connection-status",
+	"name": "connection-state",
 	"version": "0.0.0",
 	"description": "Detect online and offline network state.",
 	"main": "./dist/index.js",
@@ -14,10 +14,11 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/FilipChalupa/connection-status.git"
+		"url": "https://github.com/FilipChalupa/connection-state.git"
 	},
 	"keywords": [
 		"network",
+		"state",
 		"connection",
 		"online",
 		"offline",
