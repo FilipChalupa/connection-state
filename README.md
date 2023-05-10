@@ -26,6 +26,16 @@ connection.addListener((state) => {
 // state is 'online' or 'offline'
 ```
 
+### Endpoints
+
+You can specify endpoints to check if you are online. The library will try to fetch the endpoints. If it succeeds, you are online. If it fails, you are offline.
+
+```js
+const connection = connectionState({
+	endpoints: ['https://www.google.com'],
+})
+```
+
 ## Development
 
 - Install dependencies: `npm ci`

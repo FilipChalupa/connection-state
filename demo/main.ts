@@ -13,7 +13,9 @@ const log = (message: string) => {
 		output.innerHTML
 }
 
-const connection = connectionState()
+const connection = connectionState({
+	endpoints: [location.href, 'https://www.google.com'],
+})
 
 log(`Initial state is ${connection.getState()}`)
 
