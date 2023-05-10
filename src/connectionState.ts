@@ -15,7 +15,7 @@ export const connectionState = (options: ConnectionOptions = {}) => {
 	}
 
 	const getState = () => {
-		if (navigator.onLine) {
+		if (!('navigator' in globalThis) || navigator.onLine) {
 			return 'online'
 		}
 		return 'offline'
@@ -25,8 +25,10 @@ export const connectionState = (options: ConnectionOptions = {}) => {
 		listener.emit(getState())
 	}
 
-	window.addEventListener('offline', handleStatusChange)
-	window.addEventListener('online', handleStatusChange)
+	if ('addEventListener' in globalThis) {
+		globalThis.addEventListener('offline', handleStatusChange)
+		globalThis.addEventListener('online', handleStatusChange)
+	}
 
 	return {
 		addListener: listener.addListener,
